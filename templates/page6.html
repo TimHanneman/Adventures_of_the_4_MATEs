@@ -1,0 +1,45 @@
+<h1>Page 6</h1>
+<html>
+<head>
+<style>
+
+.middleright {
+  position: absolute;
+  bottom: 300;
+  right: 20px;
+}
+
+.middleleft {
+  position: absolute;
+  bottom: 300;
+  left: 20px;
+}
+</style>
+</head>
+
+<div class="middleleft">
+    <h2>
+        <a href="{{ url_for('page5') }}">
+    </h2>
+            <img src="/static/images/leftArrow.jpg" 
+                width="150" 
+                height="100"
+                class="img-fluid rounded" 
+                alt="Page 5" 
+            >
+        </a>
+</div>
+
+<div class="middleright">
+    <h2>
+        <a href="{{ url_for('page7') }}">
+    </h2>
+            <img src="/static/images/rightArrow.jpg" 
+                width="150" 
+                height="100"
+                class="img-fluid rounded" 
+                alt="Page 7" 
+            >
+        </a>
+</div>
+</html>
