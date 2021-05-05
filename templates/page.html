@@ -1,0 +1,114 @@
+{{bootstrap.load_css() }}
+<h1>Page {{ pageNumber }}</h1>
+<html>
+<head>
+<style>
+
+/* class to position the right arrow */
+.middleright {
+  position: absolute;
+  bottom: 300;
+  right: 20px;
+}
+/* class to position the left arrow */
+.middleleft {
+  position: absolute;
+  bottom: 300;
+  left: 20px;
+}
+/* class to position the comic page */
+.center {
+    position: absolute;
+    bottom: 10;
+    right: 400;
+}
+/* class to position the navigation bar */
+.navBar {
+    position: absolute;
+    top: 10;
+}
+/* class to position navigation bar pages */
+.tab {
+    tab-size: 20;
+}
+</style>
+</head>
+
+<!-- navigation bar -->
+<div class="navBar">
+    <pre class="tab">                                                             </pre><a href="{{ url_for('page', pageNumber = 1) }}">1</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 2) }}">2</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 3) }}">3</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 4) }}">4</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 5) }}">5</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 6) }}">6</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 7) }}">7</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 8) }}">8</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 9) }}">9</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 10) }}">10</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 11) }}">11</a>
+    &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 12) }}">12</a>
+</div>
+<!-- left arrow -->
+<div class="middleleft">
+    {% if pageNumber==1 %}
+        <h2>
+            <a href="{{ url_for('titlePage') }}">
+        </h2>
+                <img src="/static/images/leftArrow.jpg" 
+                    width="150" 
+                    height="100"
+                    class="img-fluid rounded" 
+                    alt="Page {{ pageNumber }}" 
+                >
+            </a>
+    {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
+        </h2>
+                <img src="/static/images/leftArrow.jpg" 
+                    width="150" 
+                    height="100"
+                    class="img-fluid rounded" 
+                    alt="Page {{ pageNumber }}" 
+                >
+            </a>
+    {% endif %}
+</div>
+<!-- right arrow -->
+<div class="middleright">
+    {% if pageNumber==12 %}
+        <h2>
+            <a href="{{ url_for('titlePage') }}">
+        </h2>
+                <img src="/static/images/homeIcon.jpg" 
+                    width="100" 
+                    height="100"
+                    class="img-fluid rounded" 
+                    alt="Title Page" 
+                >
+            </a>
+    {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+        </h2>
+                <img src="/static/images/rightArrow.jpg" 
+                    width="150" 
+                    height="100"
+                    class="img-fluid rounded" 
+                    alt="Page {{ pageNumber }}" 
+                >
+            </a>
+    {% endif %}
+</div>
+</html>
+
+<!-- image for a certain page -->
+<div class="center">
+    <img src="/static/images/comicPage{{ pageNumber }}.jpg" 
+        width="750" 
+        height="730"
+        class="rounded img_fluid" 
+        alt="Page {{ pageNumber }}" 
+    >
+</div>

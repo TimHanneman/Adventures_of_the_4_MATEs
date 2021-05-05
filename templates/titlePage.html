@@ -1,0 +1,25 @@
+<h1>Title Page</h1>
+<head>
+<style>
+    /* class to position the right arrow */
+    .middleright {
+        position: absolute;
+        bottom: 300;
+        right: 20px;
+    }
+
+</style>
+</head>
+
+<div class="middleRight">
+    <h2>
+        <a href="{{ url_for('page', pageNumber = 1) }}">
+    </h2>
+            <img src="/static/images/rightArrow.jpg" 
+                width="150" 
+                height="100"
+                class="img-fluid rounded" 
+                alt="Page {{ pageNumber }}" 
+            >
+        </a>
+    </div>
