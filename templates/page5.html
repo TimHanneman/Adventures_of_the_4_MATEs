@@ -1,0 +1,22 @@
+{{bootstrap.load_css() }}
+<!-- <h1>Page {{ pageNumber }}</h1> -->
+<html>
+  <body>
+    <!-- comic image for a certain page -->
+    <div class="center">
+        <img src="/static/images/comicPage{{ pageNumber }}.jpg" 
+            width="750" 
+            height="730"
+            class="rounded img_fluid" 
+            alt="Page {{ pageNumber }}" 
+        >
+    </div>
+
+    <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/178159473?autoplay=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
+
+    <video width="555" height="420" autoplay muted>
+      <source src="/static/videos/spacex2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
