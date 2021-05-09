@@ -1,16 +1,11 @@
-<h1>Title Page</h1>
+<html>
 <head>
-<style>
-    /* class to position the right arrow */
-    .middleright {
-        position: absolute;
-        bottom: 300;
-        right: 20px;
-    }
-
-</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
 </head>
 
+<body>
+    <h1>Title Page</h1>
+<!--  right arrow -->
 <div class="middleRight">
     <h2>
         <a href="{{ url_for('page', pageNumber = 1) }}">
@@ -22,4 +17,15 @@
                 alt="Page {{ pageNumber }}" 
             >
         </a>
-    </div>
+</div>
+<!-- display title page -->
+<div class="center">
+            <img src="/static/images/titlePage.jpg" 
+                width="750" 
+                height="730"
+                class="rounded img_fluid" 
+                alt="Page {{ pageNumber }}" 
+            >
+</div>
+</body>
+</html>
