@@ -2,38 +2,51 @@
 <h1>Page {{ pageNumber }}</h1>
 <html>
 <head>
-<style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"> 
+        <!-- class for transition -->
+        <style>
+            .transition {
+                background-image: url("https://media.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: transitionOut 1s;
+                -webkit-animation-fill-mode: forwards;
+            }
 
-/* class to position the right arrow */
-.middleright {
-  position: absolute;
-  bottom: 300;
-  right: 20px;
-}
-/* class to position the left arrow */
-.middleleft {
-  position: absolute;
-  bottom: 300;
-  left: 20px;
-}
-/* class to position the comic page */
-.center {
-    position: absolute;
-    bottom: 10;
-    right: 400;
-}
-/* class to position the navigation bar */
-.navBar {
-    position: absolute;
-    top: 10;
-}
-/* class to position navigation bar pages */
-.tab {
-    tab-size: 20;
-}
-</style>
+            div {
+                animation: transitionIn 0.50s;
+                -webkit-animation-fill-mode: forwards;
+            }
+            @keyframes transitionOut {
+                from {
+                    opacity: 0.1;
+                    transform: rotateX(0);
+                }
+
+                to {
+                    opacity: 0;
+                    transform: rotateX(-10deg);
+                }
+            }
+            @keyframes transitionIn {
+                from {
+                    opacity: 0;
+                    transform: rotateX(-10deg);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: rotateX(0);
+                }
+            }
+        </style>
 </head>
 
+<body>
+<!-- transition when page is flipped -->
+<div class="transition"></div>
 <!-- navigation bar -->
 <div class="navBar">
     <pre class="tab">                                                             </pre><a href="{{ url_for('page', pageNumber = 1) }}">1</a>
@@ -101,9 +114,8 @@
             </a>
     {% endif %}
 </div>
-</html>
 
-<!-- image for a certain page -->
+<!-- comic image for a certain page -->
 <div class="center">
     <img src="/static/images/comicPage{{ pageNumber }}.jpg" 
         width="750" 
@@ -112,3 +124,5 @@
         alt="Page {{ pageNumber }}" 
     >
 </div>
+</body>
+</html>
