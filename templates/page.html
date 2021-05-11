@@ -1,5 +1,8 @@
 {{bootstrap.load_css() }}
-<h1>Page {{ pageNumber }}</h1>
+<h1>Page {{ pageNumber }} <audio controls autoplay>
+    <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
+</audio></h1>
+
 <html>
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
@@ -120,5 +123,8 @@
              class="rounded img_fluid"
              alt="Page {{ pageNumber }}">
     </div>
+    <audio controls autoplay>
+        <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
+    </audio>
 </body>
 </html>
