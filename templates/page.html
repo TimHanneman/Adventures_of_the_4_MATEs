@@ -1,121 +1,131 @@
 {{bootstrap.load_css() }}
-<h1>Page {{ pageNumber }}</h1>
+<h1>Page {{ pageNumber }} <audio controls autoplay>
+    <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
+</audio></h1>
+
 <html>
-    <h1>Page {{ pageNumber }} </h1>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <style>
+        .transition {
+            background-image: url("https://media.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: transitionOut 1s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        div {
+            animation: transitionIn 0.50s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @keyframes transitionOut {
+            from {
+                opacity: 0.1;
+                transform: rotateX(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: rotateX(-10deg);
+            }
+        }
+
+        @keyframes transitionIn {
+            from {
+                opacity: 0;
+                transform: rotateX(-10deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- transition when page is flipped -->
+    <div class="transition"></div>
+    <!-- navigation bar -->
+    <div class="navBar">
+        <pre class="tab">                                                             </pre><a href="{{ url_for('page', pageNumber = 1) }}">1</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 2) }}">2</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 3) }}">3</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 4) }}">4</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 5) }}">5</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 6) }}">6</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 7) }}">7</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 8) }}">8</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 9) }}">9</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 10) }}">10</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 11) }}">11</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 12) }}">12</a>
+        &emsp;&emsp;<a href="{{ url_for('page', pageNumber = 13) }}">13</a>
+    </div>
+    <!-- left arrow -->
+    <div class="middleleft">
+        {% if pageNumber==1 %}
+        <h2>
+            <a href="{{ url_for('titlePage') }}">
+        </h2>
+        <img src="/static/images/leftArrow.jpg"
+             width="150"
+             height="100"
+             class="img-fluid rounded"
+             alt="Page {{ pageNumber }}">
+        </a>
+        {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
+        </h2>
+        <img src="/static/images/leftArrow.jpg"
+             width="150"
+             height="100"
+             class="img-fluid rounded"
+             alt="Page {{ pageNumber }}">
+        </a>
+        {% endif %}
+    </div>
+    <!-- right arrow -->
+    <div class="middleright">
+        {% if pageNumber==13 %}
+        <h2>
+            <a href="{{ url_for('titlePage') }}">
+        </h2>
+        <img src="/static/images/homeIcon.jpg"
+             width="100"
+             height="100"
+             class="img-fluid rounded"
+             alt="Title Page">
+        </a>
+        {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+        </h2>
+        <img src="/static/images/rightArrow.jpg"
+             width="150"
+             height="100"
+             class="img-fluid rounded"
+             alt="Page {{ pageNumber }}">
+        </a>
+        {% endif %}
+    </div>
+
+    <!-- comic image for a certain page -->
+    <div class="center">
+        <img src="/static/images/comicPage{{ pageNumber }}.jpg"
+             width="750"
+             height="730"
+             class="rounded img_fluid"
+             alt="Page {{ pageNumber }}">
+    </div>
     <audio controls autoplay>
-        <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
+        <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
     </audio>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-    </head>
-
-    <body>
-        <br>    
-        <!-- navigation bar -->
-        <div class="navBar">
-            <!-- <pre class="tab">                                                       
-            </pre> -->
-                        <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 2) }}">2</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 3) }}">3</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 4) }}">4</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page5', pageNumber = 5) }}">5</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 6) }}">6</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 7) }}">7</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 8) }}">8</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 9) }}">9</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
-            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
-        </div>
-
-        <!-- left arrow -->
-        <div class="middleleft">
-            {% if pageNumber==1 %}
-                <h2>
-                    <a href="{{ url_for('titlePage') }}">
-                </h2>
-                        <img src="/static/images/leftArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page {{ pageNumber }}" 
-                        >
-                    </a>
-            {% elif pageNumber==6 %}
-                <h2>
-                    <a href="{{ url_for('page5', pageNumber = pageNumber -1) }}">
-                </h2>
-                        <img src="/static/images/leftArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page 5" 
-                        >
-                    </a>   
-            {% else %}
-                <h2>
-                    <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
-                </h2>
-                        <img src="/static/images/leftArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page {{ pageNumber }}" 
-                        >
-                    </a>
-            {% endif %}
-        </div>
-        <!-- right arrow -->
-        <div class="middleright">
-            {% if pageNumber==12 %}
-                <h2>
-                    <a href="{{ url_for('titlePage') }}">
-                </h2>
-                        <img src="/static/images/homeIcon.png" 
-                            width="100" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Title Page" 
-                        >
-                    </a>
-            {% elif pageNumber==4 %}
-                <h2>
-                    <a href="{{ url_for('page5', pageNumber = pageNumber +1) }}">
-                </h2>
-                        <img src="/static/images/rightArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page 5" 
-                        >
-                    </a>         
-            {% else %}
-                <h2>
-                    <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
-                </h2>
-                        <img src="/static/images/rightArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page {{ pageNumber }}" 
-                        >
-                    </a>
-            {% endif %}
-        </div>
-
-        <!-- comic image for a certain page -->
-        <div class="center">
-            <img src="/static/images/comicPage{{ pageNumber }}.jpg" 
-                width="750" 
-                height="730"
-                class="rounded img_fluid" 
-                alt="Page {{ pageNumber }}" 
-            >
-        </div>
-        <audio controls autoplay>
-            <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
-        </audio>
-    </body>
+</body>
 </html>
