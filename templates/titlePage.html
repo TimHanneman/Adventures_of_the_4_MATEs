@@ -3,20 +3,29 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
     </head>
 
-    <body>
-        <h1>Title Page</h1>
-        <!-- right arrow -->
-        <div class="middleRight">
-            <h2>
-                <a href="{{ url_for('page', pageNumber = 1) }}">
-            </h2>
-                    <img src="/static/images/rightArrow.jpg" 
-                        width="150" 
-                        height="100"
-                        class="img-fluid rounded" 
-                        alt="Page {{ pageNumber }}" 
-                    >
-                </a>
-        </div>
-    </body>
+<body>
+    <h1>Title Page</h1>
+<!--  right arrow -->
+<div class="middleRight">
+    <h2>
+        <a href="{{ url_for('page', pageNumber = 1) }}">
+    </h2>
+            <img src="/static/images/rightArrow.png" 
+                width="150" 
+                height="100"
+                class="img-fluid rounded" 
+                alt="Page {{ pageNumber }}" 
+            >
+        </a>
+</div>
+<!-- display title page -->
+<div class="center">
+            <img src="/static/images/titlePage.jpg" 
+                width="750" 
+                height="730"
+                class="rounded img_fluid" 
+                alt="Page {{ pageNumber }}" 
+            >
+</div>
+</body>
 </html>
