@@ -1,4 +1,5 @@
 {{bootstrap.load_css() }}
+<h1>Page {{ pageNumber }}</h1>
 <html>
     <h1>Page {{ pageNumber }} </h1>
     <audio controls autoplay>
@@ -26,6 +27,7 @@
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
         </div>
 
         <!-- left arrow -->
