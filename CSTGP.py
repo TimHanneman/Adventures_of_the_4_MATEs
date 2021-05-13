@@ -6,6 +6,9 @@ import random
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
+href="{{ url_for('static', filename='style.css')}}"
+
+
 @app.route('/')
 def titlePage():
     return render_template('titlePage.html')
