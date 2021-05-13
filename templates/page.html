@@ -6,33 +6,6 @@
     </audio>
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
-        <script>
-            $(document).ready(function(){
-                /* Get iframe src attribute value i.e. video url
-                and store it in a variable */
-                var url = $("#cartoonVideo").attr('src');
-      
-                // video is paused when modal is closed
-                // $("#myModal").on('hidden.bs.modal', function () {
-                //     $("#cartoonVideo")[0].pause();
-                // });
-                
-                /* Assign empty url value to the iframe src attribute when
-                modal hide, which stop the video playing */
-                $("#myModal").on('hide.bs.modal', function(){
-                    $("#cartoonVideo").attr('src', '');
-                });
-                
-                /* Assign the initially stored url back to the iframe src
-                attribute when modal is displayed again */
-                $("#myModal").on('show.bs.modal', function(){
-                    $("#cartoonVideo").attr('src', url);
-                });
-            });
-          </script> 
     </head>
 
     <body>
@@ -120,30 +93,7 @@
             >
         </div>
 
-        {% if pageNumber == 5 %}{
-        <div class="pop-out-video">
-            <!-- Button HTML (to Trigger Modal) -->
-            <a href="#myModal" class="page5-button" data-toggle="modal">Click Here For Video</a>
-            
-            <!-- Modal HTML -->
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">To The Moon</h5>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="embed-responsive embed-responsive-16by9">
-                            <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="/static/videos/spacex.mp4" allowfullscreen></iframe>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>  
-        }
-        {% endif %}
+
         <audio controls autoplay>
             <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
         </audio>

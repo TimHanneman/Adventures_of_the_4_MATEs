@@ -73,24 +73,6 @@ h1{
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-.pop-out-video{
-    margin: 20px;
-}
-.modal-dialog iframe{
-    margin: 0 auto;
-    display: block;
-}
-
-.page5-button{
-    position: absolute;
-    right: 33%;
-    top: 90%;
-    height: 50px;
-    width: 100px;
-    color: rgb(0, 179, 255);
-    background-color: red;
-}
-
 .transition {
     background-image: url("https://media.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif");
     height: 100%;
