@@ -14,6 +14,6 @@ def titlePage():
 def page(pageNumber):
     return render_template('page.html', pageNumber=int(pageNumber))
 
-@app.route('/Page<pageNumber>')
-def page5(pageNumber):
-    return render_template('page5.html', pageNumber=int(pageNumber))
+# @app.route('/Page<pageNumber>')
+# def page5(pageNumber):
+#     return render_template('page5.html', pageNumber=int(pageNumber))
