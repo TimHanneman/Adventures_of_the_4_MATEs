@@ -26,6 +26,8 @@
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
+        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
+        
     </div>
     <div class="transition"></div>
     <!-- left arrow -->
@@ -49,15 +51,16 @@
     </div>
     <!-- right arrow -->
     <div class="middleright">
-        {% if pageNumber==12 %}
+        {% if pageNumber== 13 %}
         <h2>
             <a href="{{ url_for('titlePage') }}">
         </h2>
-        <img src="/static/images/homeIcon.png" width="150" height="100" class="img-fluid rounded" alt="Title Page">
+        <div>
+        <img src="/static/images/homeIcon.png"  alt="Title Page">
         </a>
 
         {% else %}
-        <h2>
+        <h2></h2>
          <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
         </h2>
         <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
@@ -73,11 +76,9 @@
 
     <div id="audio" >
     <audio controls autoplay>
-        <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
-    </audio>
-    <audio controls autoplay id='audio1'>
         <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
     </audio>
+
     </div>
 </body>
 
