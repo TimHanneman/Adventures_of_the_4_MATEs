@@ -1,0 +1,85 @@
+{{bootstrap.load_css() }}
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <style>
+        .animated {
+            background-image: url("/static/images/finalCopyofComic/comicPage6.jpg");
+            background-repeat: no-repeat;
+            background-position: left top;
+            animation-duration: 10s;
+            animation-fill-mode: both;
+        }
+
+        .animated2 {
+            background-image: url("/static/images/finalCopyofComic/comicPage6(2).jpg");
+            animation-delay: 5s;
+            background-repeat: no-repeat;
+            background-position: left top;
+            animation-duration: 10s;
+            animation-fill-mode: both;
+        }
+
+        .animated3 {
+            background-image: url("/static/images/finalCopyofComic/comicPage6(3).jpg");
+            animation-delay: 10s;
+            background-repeat: no-repeat;
+            background-position: left top;
+            animation-duration: 10s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            animation-name: fadeIn;
+            height: 300px;
+        }
+
+        .fadeIn2 {
+            animation-name: fadeIn;
+            height: 450px;
+        }
+
+        .fadeIn3 {
+            animation-name: fadeIn;
+            height: 500px;
+           
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <!--  right arrow -->
+    <div class="middleRight">
+        <h2>
+            <a href="{{ url_for('page', pageNumber = 1) }}">
+        </h2>
+        <img src="/static/images/rightArrow.jpg" width="150" height="100" class="img-fluid rounded"
+            alt="Page {{ pageNumber }}">
+        </a>
+    </div>
+
+    <!-- display title page -->
+    <div id="animated-example" class="animated fadeIn"></div>
+    <div id="animated-example" class="animated2 fadeIn2"></div>
+    <div id="animated-example" class="animated3 fadeIn3"></div>
+
+
+
+
+
+</body>
+
+</html>
