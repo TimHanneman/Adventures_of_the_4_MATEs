@@ -31,6 +31,7 @@
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
         
+        
     </div>
     
     <!-- left arrow -->
@@ -57,11 +58,11 @@
         {% if pageNumber== 13 %}
         <h2>
             <a href="{{ url_for('titlePage') }}">
-        </h2>
+        
         <div>
         <img src="/static/images/homeIcon.png"  alt="Title Page">
         </a>
-
+    </h2>
         {% else %}
         <h2></h2>
          <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
