@@ -1,18 +1,20 @@
 {{bootstrap.load_css() }}
 <html>
-    <h1>Page {{ pageNumber }} </h1>
-    <audio controls autoplay>
-        <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
-    </audio>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-    </head>
+<h1>Page {{ pageNumber }} </h1>
+<audio controls autoplay id='audio1'>
+    <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
+</audio>
 
-    <body>
-        <br>      
-        <!-- navigation bar -->
-        <div class="navBar">
-            <!-- <pre class="tab">                                                       
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    
+</head>
+
+<body>
+    <br>
+    <!-- navigation bar -->
+    <div class="navBar">
+        <!-- <pre class="tab">                                                       
             </pre> -->
                         <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 2) }}">2</a>
@@ -70,19 +72,15 @@
                         >
                     </a>
 
-            {% else %}
-                <h2>
-                    <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
-                </h2>
-                        <img src="/static/images/rightArrow.png" 
-                            width="150" 
-                            height="100"
-                            class="img-fluid rounded" 
-                            alt="Page {{ pageNumber }}" 
-                        >
-                    </a>
-            {% endif %}
-        </div>
+        {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+        </h2>
+        <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
+            alt="Page {{ pageNumber }}">
+        </a>
+        {% endif %}
+    </div>
 
     <!-- comic image for a certain page -->
         <div class="center">
