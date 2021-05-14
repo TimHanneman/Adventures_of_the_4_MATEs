@@ -44,44 +44,7 @@ h1{
     color:white;
 }
 
-.transition {
-    background-image: url("https://media.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: transitionOut 1s;
-    animation-fill-mode: forwards;
-}
 
-div {
-    animation: transitionIn 0.50s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes transitionOut {
-    from {
-        opacity: 0.1;
-        transform: rotateX(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-}
-
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
-}
 
 
 #nav{
@@ -118,9 +81,7 @@ h1{
     color: rgb(0, 179, 255);
     background-color: red;
 }
-#audio1{
-    opacity: 0;
-}
+
 audio{
     opacity: 0;
 }
