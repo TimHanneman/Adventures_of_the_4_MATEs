@@ -8,7 +8,6 @@
     </audio>
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-    
 </head>
 
 <body>
@@ -30,8 +29,6 @@
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
-        
-        
     </div>
     
     <!-- left arrow -->
@@ -39,18 +36,19 @@
         {% if pageNumber==1 %}
         <h2>
             <a href="{{ url_for('titlePage') }}">
+                <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
+                     alt="Page {{ pageNumber }}">
+            </a>
         </h2>
-        <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
-            alt="Page {{ pageNumber }}">
-        </a>
 
         {% else %}
         <h2>
             <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
+
+                <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
+                     alt="Page {{ pageNumber }}">
+            </a>
         </h2>
-        <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
-            alt="Page {{ pageNumber }}">
-        </a>
         {% endif %}
     </div>
     <!-- right arrow -->
@@ -58,18 +56,16 @@
         {% if pageNumber== 13 %}
         <h2>
             <a href="{{ url_for('titlePage') }}">
-        
-        <div>
-        <img src="/static/images/homeIcon.png"  alt="Title Page">
-        </a>
-    </h2>
-        {% else %}
-        <h2></h2>
-         <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+                    <img src="/static/images/homeIcon.png" alt="Title Page">
+            </a>
         </h2>
-        <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
-            alt="Page {{ pageNumber }}">
-        </a>
+        {% else %}
+        <h2>
+            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+                <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
+                     alt="Page {{ pageNumber }}">
+            </a>
+        </h2>
         {% endif %}
     </div>
 
