@@ -84,21 +84,6 @@ div {
 }
 }
 
-#nav{
-    background-color: red;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-}
-
-h1{
-    /* z-index: 4; */
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
 .pop-out-video{
     margin: 20px;
     height: fit-content;
