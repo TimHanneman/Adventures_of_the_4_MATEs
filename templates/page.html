@@ -1,81 +1,81 @@
 {{bootstrap.load_css() }}
 <html>
-<h1>Page {{ pageNumber }} </h1>
+    <h1>Page {{ pageNumber }} </h1>
 
-<div id="audio" >
-    <audio controls autoplay>
-        <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
-    </audio>
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-</head>
+    <div id="audio" >
+        <audio controls autoplay>
+            <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
+        </audio>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    </head>
 
-<body>
-    <br>
-    <!-- navigation bar -->
-    <div class="navBar">
-        <!-- <pre class="tab">                                                       
-            </pre> -->
-        &emsp;&emsp; <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 2) }}">2</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 3) }}">3</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 4) }}">4</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 5) }}">5</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 6) }}">6</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 7) }}">7</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 8) }}">8</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 9) }}">9</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
-        &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
-    </div>
+    <body>
+        <br>
+        <!-- navigation bar -->
+        <div class="navBar">
+            <!-- <pre class="tab">                                                       
+                </pre> -->
+            &emsp;&emsp; <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 2) }}">2</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 3) }}">3</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 4) }}">4</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 5) }}">5</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 6) }}">6</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 7) }}">7</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 8) }}">8</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 9) }}">9</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
+        </div>
     
-    <!-- left arrow -->
-    <div class="middleleft">
-        {% if pageNumber==1 %}
-        <h2>
-            <a href="{{ url_for('titlePage') }}">
-                <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
-                     alt="Page {{ pageNumber }}">
-            </a>
-        </h2>
+        <!-- left arrow -->
+        <div class="middleleft">
+            {% if pageNumber==1 %}
+            <h2>
+                <a href="{{ url_for('titlePage') }}">
+                    <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
+                         alt="Page {{ pageNumber }}">
+                </a>
+            </h2>
 
-        {% else %}
-        <h2>
-            <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
+            {% else %}
+            <h2>
+                <a href="{{ url_for('page', pageNumber = pageNumber - 1) }}">
 
-                <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
-                     alt="Page {{ pageNumber }}">
-            </a>
-        </h2>
-        {% endif %}
-    </div>
-    <!-- right arrow -->
-    <div class="middleright">
-        {% if pageNumber== 13 %}
-        <h2>
-            <a href="{{ url_for('titlePage') }}">
-                    <img src="/static/images/homeIcon.png" alt="Title Page" class="img-fluid rounded">
-            </a>
-        </h2>
-        {% else %}
-        <h2>
-            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
-                <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
-                     alt="Page {{ pageNumber }}">
-            </a>
-        </h2>
-        {% endif %}
-    </div>
+                    <img src="/static/images/leftArrow.png" width="150" height="100" class="img-fluid rounded"
+                         alt="Page {{ pageNumber }}">
+                </a>
+            </h2>
+            {% endif %}
+        </div>
+        <!-- right arrow -->
+        <div class="middleright">
+            {% if pageNumber== 13 %}
+            <h2>
+                <a href="{{ url_for('titlePage') }}">
+                        <img src="/static/images/homeIcon.png" alt="Title Page" class="img-fluid rounded">
+                </a>
+            </h2>
+            {% else %}
+            <h2>
+                <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+                    <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
+                         alt="Page {{ pageNumber }}">
+                </a>
+            </h2>
+            {% endif %}
+        </div>
 
-    <!-- comic image for a certain page -->
-    <div class="center">
-        <img src="/static/images/comicPage{{ pageNumber }}.jpg"  >
-    </div>
+        <!-- comic image for a certain page -->
+        <div class="center">
+            <img src="/static/images/comicPage{{ pageNumber }}.jpg"  >
+        </div>
 
     
-    </div>
-</body>
+        </div>
+    </body>
 
 </html>
