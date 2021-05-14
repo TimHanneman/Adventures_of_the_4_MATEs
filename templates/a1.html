@@ -53,20 +53,30 @@
         .fadeIn3 {
             animation-name: fadeIn;
             height: 500px;
-           
+
         }
     </style>
 </head>
 
 <body>
-   
+    <div>
+        <audio controls autoplay id="audio">
+            <source src="\static\audio\page6.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <div>
+        <audio controls autoplay id='audio1'>
+            <source src="\static\audio\page6.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
 
+    <!--  right arrow -->
     <!--  right arrow -->
     <div class="middleRight">
         <h2>
             <a href="{{ url_for('page', pageNumber = 1) }}">
         </h2>
-        <img src="/static/images/rightArrow.jpg" width="150" height="100" class="img-fluid rounded"
+        <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
             alt="Page {{ pageNumber }}">
         </a>
     </div>

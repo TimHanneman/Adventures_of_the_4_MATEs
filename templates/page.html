@@ -1,9 +1,7 @@
 {{bootstrap.load_css() }}
 <html>
 <h1>Page {{ pageNumber }} </h1>
-<audio controls autoplay id='audio1'>
-    <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
-</audio>
+
 
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
@@ -16,7 +14,7 @@
     <div class="navBar">
         <!-- <pre class="tab">                                                       
             </pre> -->
-        <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
+        &emsp;&emsp; <a id="nav" href="{{ url_for('page', pageNumber = 1) }}">1</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 2) }}">2</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 3) }}">3</a>
         &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 4) }}">4</a>
@@ -55,12 +53,12 @@
         <h2>
             <a href="{{ url_for('titlePage') }}">
         </h2>
-        <img src="/static/images/homeIcon.png" width="100" height="100" class="img-fluid rounded" alt="Title Page">
+        <img src="/static/images/homeIcon.png" width="150" height="100" class="img-fluid rounded" alt="Title Page">
         </a>
 
         {% else %}
         <h2>
-            <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
+         <a href="{{ url_for('page', pageNumber = pageNumber + 1) }}">
         </h2>
         <img src="/static/images/rightArrow.png" width="150" height="100" class="img-fluid rounded"
             alt="Page {{ pageNumber }}">
@@ -76,6 +74,9 @@
     <div id="audio" >
     <audio controls autoplay>
         <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
+    </audio>
+    <audio controls autoplay id='audio1'>
+        <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
     </audio>
     </div>
 </body>
