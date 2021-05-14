@@ -26,6 +26,7 @@
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 10) }}">10</a>
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 11) }}">11</a>
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 12) }}">12</a>
+            &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
         </div>
         <div class="transition"></div> 
         <!-- left arrow -->
@@ -57,7 +58,7 @@
         </div>
         <!-- right arrow -->
         <div class="middleright">
-            {% if pageNumber==12 %}
+            {% if pageNumber==13 %}
                 <h2>
                     <a href="{{ url_for('titlePage') }}">
                 </h2>
@@ -83,19 +84,14 @@
             {% endif %}
         </div>
 
-        <!-- comic image for a certain page -->
+    <!-- comic image for a certain page -->
         <div class="center">
-            <img src="/static/images/comicPage{{ pageNumber }}.jpg" 
-                width="750" 
-                height="730"
-                class="rounded img_fluid" 
-                alt="Page {{ pageNumber }}" 
-            >
+            <img src="/static/images/comicPage{{ pageNumber }}.jpg"
+                 width="750"
+                 height="730"
+                 class="rounded img_fluid"
+                 alt="Page {{ pageNumber }}">
         </div>
 
-
-        <audio controls autoplay>
-            <source src="\static\audio\page{{ pageNumber  }}.mp3" type="audio/mpeg" />
-        </audio>
     </body>
 </html>
