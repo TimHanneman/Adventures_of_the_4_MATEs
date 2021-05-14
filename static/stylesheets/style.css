@@ -51,12 +51,12 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     animation: transitionOut 1s;
-    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 div {
     animation: transitionIn 0.50s;
-    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 @keyframes transitionOut {
@@ -82,7 +82,7 @@ div {
         transform: rotateX(0);
     }
 }
-}
+
 
 #nav{
     background-color: red;
