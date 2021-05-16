@@ -1,3 +1,17 @@
+# CST 205
+# Adventures of the 4 M.A.T.E.S
+# This program is an interactive comic book with audio.
+# By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.
+# May 17, 2021
+
+# Marco worked on CSTGP.py, page.html, and titlePage.html. 
+# He set up routing functionality for the different pages
+# and navigation bar.
+
+# Tim worked on
+# Anthony worked on
+# Eddie worked on
+
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from PIL import Image
