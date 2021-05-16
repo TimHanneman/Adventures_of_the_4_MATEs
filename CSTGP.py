@@ -9,7 +9,7 @@
 # I set up routing functionality for the different pages
 # and navigation bar.
 
-# Tim: worked on
+# Tim: worked on compiling audio assets and getting it to work on each page, some bug fixing in the html formats.
 
 # Anthony: I worked on troubleshooting code and trying to expand the functionalty and user interactivity, fixed some layout issues, and also worked on page flip animation using openCV 
 # but could not figure out how to make it look like a page turn, so did not implement it. ALso gathered the audio for Tim to manipulate for the comics.
