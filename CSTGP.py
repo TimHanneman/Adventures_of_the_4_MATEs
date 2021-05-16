@@ -33,7 +33,11 @@ def titlePage():
 
 @app.route('/page<pageNumber>')
 def page(pageNumber):
-    return render_template('page.html', pageNumber=int(pageNumber))
+    comic_page = "static/images/comicPage" + str(pageNumber) =".jpg"
+    if os.path.exists(comicPage):
+        return render_template('page.html', pageNumber=int(pageNumber))
+    else:
+        return render_template('page_not_found.html'), 404
 
 # @app.route('/Page<pageNumber>')
 # def page5(pageNumber):
