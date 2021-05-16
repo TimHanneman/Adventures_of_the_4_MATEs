@@ -8,9 +8,11 @@
 # He set up routing functionality for the different pages
 # and navigation bar.
 
-# Tim worked on
-# Anthony worked on
-# Eddie worked on
+# Tim worked on compiling sound assests together to work in page.html. Bug fixing in style.css, page.html, and titlePage.html
+# Anthony worked on style.css, titlePage.html, bug fixing with Tim.
+# Eddie worked on style.css, page.html, bug fixing with Marco.
+
+#Each person contributed image files, and several sound files for the project to function.
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
