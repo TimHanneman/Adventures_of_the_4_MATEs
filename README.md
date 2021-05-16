@@ -1,7 +1,7 @@
-# Adventures_of_the_4_MATEs
-# By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.
-# CST205-01_SP21:Multimedia Design & Progmng
-# May 17, 2021
+ Adventures_of_the_4_MATEs
+ By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.
+ CST205-01_SP21:Multimedia Design & Progmng
+ May 17, 2021
 ##Commands to run##
 
 $env:FLASK_APP = "CSTGP.py"

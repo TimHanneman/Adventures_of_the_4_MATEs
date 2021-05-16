@@ -3,6 +3,7 @@
 # This program is an interactive comic book with audio.
 # By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.
 # May 17, 2021
+# <!-- https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git -->
 
 # Marco worked on CSTGP.py, page.html, and titlePage.html. 
 # He set up routing functionality for the different pages
