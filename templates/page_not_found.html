@@ -1,12 +1,35 @@
-﻿<!DOCTYPE html>
+﻿<!-- https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git -->
+<html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+
+
 </head>
+
 <body>
-    <img src="https://http.cat/404">
+    <h1>The 4 M.A.T.E.S. Comic Book Special</h1>
+
+    <!--  right arrow -->
+    <div class="middleRight">
+        <h2>
+            <a href="{{ url_for('page', pageNumber = 1) }}">
+
+                <img src="/static/images/rightArrow.png" class="img-fluid rounded"
+                     alt="Page {{ pageNumber }}">
+            </a>
+        </h2>
+    </div>
+    <div class="center">
+        <img src="https://http.cat/404">
+    </div>
+
+
+
+
+
+
 
 </body>
+
 </html>
