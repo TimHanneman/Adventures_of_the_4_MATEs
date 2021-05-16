@@ -4,15 +4,16 @@
 # By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.
 # May 17, 2021
 
-# Marco worked on CSTGP.py, page.html, and titlePage.html. 
-# He set up routing functionality for the different pages
+# Marco: I  worked on CSTGP.py, page.html, and titlePage.html. 
+# I set up routing functionality for the different pages
 # and navigation bar.
 
-# Tim worked on compiling sound assests together to work in page.html. Bug fixing in style.css, page.html, and titlePage.html
-# Anthony worked on style.css, titlePage.html, bug fixing with Tim.
-# Eddie worked on style.css, page.html, bug fixing with Marco.
+# Tim: worked on
 
-#Each person contributed image files, and several sound files for the project to function.
+# Anthony: I worked on troubleshooting code and trying to expand the functionalty and user interactivity, fixed some layout issues, and also worked on page flip animation using openCV 
+# but could not figure out how to make it look like a page turn, so did not implement it. ALso gathered the audio for Tim to manipulate for the comics.
+
+# Eddie worked on
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
