@@ -6,9 +6,12 @@
 
 $env:FLASK_APP = "CSTGP.py"
 
+
 $env:FLASK_DEBUG = "1"
 
+
 flask run
+
 
 # Github repository: https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git
 
