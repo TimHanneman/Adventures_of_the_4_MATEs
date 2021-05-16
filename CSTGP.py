@@ -20,6 +20,7 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from PIL import Image
 import random
+import os
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -33,8 +34,8 @@ def titlePage():
 
 @app.route('/page<pageNumber>')
 def page(pageNumber):
-    comic_page = "static/images/comicPage" + str(pageNumber) =".jpg"
-    if os.path.exists(comicPage):
+    comic_page = "static/images/comicPage" + str(pageNumber) + ".jpg"
+    if os.path.exists(comic_page):
         return render_template('page.html', pageNumber=int(pageNumber))
     else:
         return render_template('page_not_found.html'), 404
