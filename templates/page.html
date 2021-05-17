@@ -13,6 +13,7 @@ https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git
 <html>
 <h1>Page {{ pageNumber }} </h1>
 
+<!-- Code that plays the audio-->
 <div id="audio">
     <audio controls autoplay>
         <source src="\static\audio\page{{ pageNumber }}.mp3" type="audio/mpeg" />
@@ -42,7 +43,7 @@ https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git
             &emsp;&emsp;<a id="nav" href="{{ url_for('page', pageNumber = 13) }}">13</a>
         </div>
 
-        <!-- left arrow -->
+        <!-- left arrow. Different for first page, and all other pages-->
         <div class="middleleft">
             {% if pageNumber==1 %}
             <h2>
@@ -62,7 +63,7 @@ https://github.com/TimHanneman/Adventures_of_the_4_MATEs.git
             </h2>
             {% endif %}
         </div>
-        <!-- right arrow -->
+        <!-- right arrow. Different for last page, and all other pages-->
         <div class="middleright">
             {% if pageNumber== 13 %}
             <h2>
