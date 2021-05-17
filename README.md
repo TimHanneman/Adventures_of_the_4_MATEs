@@ -2,6 +2,7 @@
  By Marco-Antonio Vega, Timothy Hanneman, Anthony Rubio, and Eddie Sanchez.<br>
  CST205-01_SP21:Multimedia Design & Progmng<br>
  May 17, 2021<br>
+ Trello Link: https://trello.com/b/v5h6vo6H/cst-205-project<br>
 
 ## Commands to run ##
 
