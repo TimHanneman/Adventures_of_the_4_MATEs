@@ -7,7 +7,8 @@
 
 # Marco: I  worked on CSTGP.py, page.html, and titlePage.html. 
 # I set up routing functionality for the different pages
-# and navigation bar.
+# and navigation bar. I creatd a page transition, but since it
+# did not work with everyone's branches merged in main, it is not in the final product.
 
 # Tim: worked on compiling audio assets and getting it to work on each page, some bug fixing in the html formats CSS. Error handler route which uses the free httpcats api for the error image page.
 
@@ -39,10 +40,6 @@ def page(pageNumber):
         return render_template('page.html', pageNumber=int(pageNumber))
     else:
         return render_template('page_not_found.html'), 404
-
-# @app.route('/Page<pageNumber>')
-# def page5(pageNumber):
-#     return render_template('page5.html', pageNumber=int(pageNumber))
 
 #https://flask.palletsprojects.com/en/1.1.x/quickstart/
 
